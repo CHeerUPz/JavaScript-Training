@@ -1,4 +1,4 @@
-function convertToRoman(num) = {
+function convertToRoman(num) {
 
   function oneToNine(type, number) {
     
@@ -23,11 +23,11 @@ function convertToRoman(num) = {
         return 'M';
       } else if (number == 2) {
         return 'MM';
-      } else if (number == 3 {
-        return 'MMM;
-      } else if (number == 4 {
+      } else if (number == 3) {
+        return 'MMM';
+      } else if (number == 4) {
         return 'MMMM';
-      } else if (number == 5 {
+      } else if (number == 5) {
         return 'MMMMM';
       }
     }
@@ -64,5 +64,4 @@ function convertToRoman(num) = {
   
   return roman;
 }
-
 convertToRoman(1984);
