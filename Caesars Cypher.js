@@ -14,7 +14,9 @@ function rot13(str) {
         }
       }
     } 
-    strFinal += ' ';
+    if (i < strS.length - 1) {
+      strFinal += ' ';
+    }
   }
   console.log(strFinal);
   
