@@ -2,19 +2,35 @@ function convertToRoman(num) = {
 
   function oneToNine(type, number) {
     
+    let letter1 = '';
+    let letter2 = '';
+    let letter3 = '';
+  
     if (type == 0) {
-      let letter1 = 'I';
-      let letter2 = 'V';
-      let letter3 = 'X';
+      letter1 = 'I';
+      letter2 = 'V';
+      letter3 = 'X';
     } else if (type == 1) {
-      let letter1 = 'X';
-      let letter2 = 'L';
-      let letter3 = 'C';
+      letter1 = 'X';
+      letter2 = 'L';
+      letter3 = 'C';
     } else if (type == 2) {
-      let letter1 = 'C';
-      let letter2 = 'D';
-      let letter3 = 'M';
-    } 
+      letter1 = 'C';
+      letter2 = 'D';
+      letter3 = 'M';
+    } else if (type == 3) {
+      if (number == 1) {
+        return 'M';
+      } else if (number == 2) {
+        return 'MM';
+      } else if (number == 3 {
+        return 'MMM;
+      } else if (number == 4 {
+        return 'MMMM';
+      } else if (number == 5 {
+        return 'MMMMM';
+      }
+    }
     
     if (number == 1) {
       return letter1;
@@ -38,13 +54,13 @@ function convertToRoman(num) = {
   }
   
   let roman = [];
-  let divRev = num.toString().reverse().split('').map(Number);
+  let divRev = num.toString().split('').map(Number).reverse();
   
   for (let i = 0; i < divRev.length; i++) {
     roman.push(oneToNine(i, divRev[i]));
   }
   
-  roman.reverse().join('');
+  roman = roman.reverse().join('');
   
   return roman;
 }
