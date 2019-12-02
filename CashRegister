@@ -1,6 +1,17 @@
   let array = [];
   let difference = price - cash;
-
+  
+  function counts(j, x, name) {
+    if (cid[j][1] > 0) {
+      for (let i = cid[j][1]; i > x; i = i - x) {
+        if (difference - i >= 0) {
+          difference = difference - i;
+          array.push([name, i]);
+        }
+      }
+    }
+  }
+    
   for (let j = 8; j >= 0; j--) {
     let x = 0;
     let name = "";
@@ -49,16 +60,6 @@
       name = "PENNY";
       counts(j, x, name);
     }
-
-    function counts(j, x, name) {
-      if (cid[j][1] > 0) {
-        for (let i = cid[j][1]; i > x; i = i - x) {
-          if (difference - i >= 0) {
-            difference = difference - i;
-            array.push([name, i]);
-          }
-        }
-      }
-    }
+  }
+  console.log(array);
   return array;
-}
