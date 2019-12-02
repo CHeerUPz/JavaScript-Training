@@ -1,0 +1,64 @@
+  let array = [];
+  let difference = price - cash;
+
+  for (let j = 8; j >= 0; j--) {
+    let x = 0;
+    let name = "";
+    if (j == 8) {
+      x = 100;
+      name = "ONE HUNDRED";
+      counts(j, x, name);
+    }
+    if (j == 7) {
+      x = 20;
+      name = "TWENTY";
+      counts(j, x, name);
+    }
+    if (j == 6) {
+      x = 10;
+      name = "TEN";
+      counts(j, x, name);
+    }
+    if (j == 5) {
+      x = 5;
+      name = "FIVE";
+      counts(j, x, name);
+    }
+    if (j == 4) {
+      x = 1;
+      name = "ONE";
+      counts(j, x, name);
+    }
+    if (j == 3) {
+      x = 0.25;
+      name = "QUARTER";
+      counts(j, x, name);
+    }
+    if (j == 2) {
+      x = 0.1;
+      name = "DIME";
+      counts(j, x, name);
+    }
+    if (j == 1) {
+      x = 0.05;
+      name = "NICKEL";
+      counts(j, x, name);
+    }
+    if (j == 0) {
+      x = 0.01;
+      name = "PENNY";
+      counts(j, x, name);
+    }
+
+    function counts(j, x, name) {
+      if (cid[j][1] > 0) {
+        for (let i = cid[j][1]; i > x; i = i - x) {
+          if (difference - i >= 0) {
+            difference = difference - i;
+            array.push([name, i]);
+          }
+        }
+      }
+    }
+  return array;
+}
