@@ -6,7 +6,7 @@
       for (let i = cid[j][1]; i > x; i = i - x) {
         if (difference - i >= 0) {
           difference = difference - i;
-          array.push([name, i]);
+          array = array.push([name, i]);
         }
       }
     }
